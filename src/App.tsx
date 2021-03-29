@@ -1,19 +1,24 @@
-import React from 'react';
-import logo from './logo.svg';
+import * as React from 'react';
 import './App.css';
-import Header from './components/Header'
-import Intro from './components/Intro'
+import { connect } from 'react-redux';
+import Card from './components/Card';
+import Container from './components/Container';
+import Input from './components/Input';
 
 class App extends React.Component {
+
   public render(){
     return (
-      <div className="App">
-        <Header />
-        <Intro />
-        <Intro text="bola"/>
-      </div>
+      <Container>
+        <Card>
+          <Input placeholder='Email' label="Email"/>
+          <Input placeholder='Password' label="Password"/>
+        </Card>
+      </Container>
+      
     );
   }
 }
+
 
 export default App;
