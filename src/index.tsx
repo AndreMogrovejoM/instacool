@@ -2,7 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import {Provider} from 'react-redux';
 import {createStore, combineReducers} from 'redux';
-//import { reducer as formReducer } from 'redux-form';
+import { reducer as formReducer } from 'redux-form';
+import { Router } from 'react-router';
+import history from './history'
 import reducer from './reducers';
 import './index.css';
 import App from './App';
@@ -10,11 +12,17 @@ import reportWebVitals from './reportWebVitals';
 
 const store = createStore(combineReducers({
   count: reducer,
+  form: formReducer
 }))
+
+
 
 ReactDOM.render(
   <Provider store={store}>
-    <App />
+    <Router history={history}>
+      <App />
+    </Router>
+    
   </Provider >,
   document.getElementById('root')
 );

@@ -1,20 +1,23 @@
 import * as React from 'react';
 import './App.css';
 import { connect } from 'react-redux';
-import Card from './components/Card';
-import Container from './components/Container';
-import Input from './components/Input';
+import Login from './conteiners/Auth/Login';
+import Register from './conteiners/Auth/Register';
+import NewsFeed from './conteiners/NewsFeed';
+import Navbar from './components/Navbar';
+import { Route } from 'react-router';
 
 class App extends React.Component {
 
   public render(){
     return (
-      <Container>
-        <Card>
-          <Input placeholder='Email' label="Email"/>
-          <Input placeholder='Password' label="Password"/>
-        </Card>
-      </Container>
+      <div>
+        <Route exact={true} path='/' component={Login}/>
+        <Route exact={true} path='/register' component={Register}/>
+        <Route path='/app' component={Navbar}/>
+        <Route exact={true} path='/app/newsfeed' component={NewsFeed}/>
+        
+      </div>
       
     );
   }

@@ -2,7 +2,7 @@ import * as React from 'react'
 
 const style = {
     backgroundColor: '#fff',
-    border: '1px solid #eee',
+    border: '2px solid #eee',
     padding: '10px 15px',
 
 }
