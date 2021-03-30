@@ -1,7 +1,7 @@
 yarn add redux react redux
 yarn add @types/redux-form
 yarn add @types/redux-router
-yarn install firebase
+yarn add firebase
 yarn add history
 yarn add react-router-dom
 yarn add @types/react-router-dom
@@ -9,3 +9,5 @@ yarn add @types/react-router-dom
 yarn add @fortawesome/fontawesome-svg-core
   yarn add @fortawesome/free-solid-svg-icons
   yarn add @fortawesome/react-fontawesome
+
+npm install typescript@">=3.4.0 <3.6.0"
