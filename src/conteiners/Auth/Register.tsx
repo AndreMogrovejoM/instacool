@@ -15,7 +15,7 @@ export default class Register extends React.Component {
             <Title>Register</Title>
             <Input placeholder='Email' label="Email"/>
             <Input placeholder='Password' label="Password"/>
-            <Button>Send</Button>
+            <Button block={true}>Send</Button>
             <Center>
                 <Link to='/'>Go to Loggin</Link>
             </Center>

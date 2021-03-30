@@ -5,7 +5,8 @@ import Login from './conteiners/Auth/Login';
 import Register from './conteiners/Auth/Register';
 import NewsFeed from './conteiners/NewsFeed';
 import Navbar from './components/Navbar';
-import { Route } from 'react-router';
+import Profile from './conteiners/Profile';
+import { Route } from 'react-router-dom';
 
 class App extends React.Component {
 
@@ -16,6 +17,7 @@ class App extends React.Component {
         <Route exact={true} path='/register' component={Register}/>
         <Route path='/app' component={Navbar}/>
         <Route exact={true} path='/app/newsfeed' component={NewsFeed}/>
+        <Route exact={true} path='/app/profile' component={Profile}/>
         
       </div>
       

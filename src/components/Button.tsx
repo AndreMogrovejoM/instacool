@@ -1,13 +1,14 @@
 import * as React from 'react'
 
-const style = (block: boolean) => ({
+const style = (block: boolean): React.CSSProperties => ({
     backgroundColor: '#00D1B2',
     border: '0',
     borderRadius: '4px',
+    cursor: 'pointer',
     color: '#fff',
     marginBottom: '10px',
     padding: '10px 15px',
-    width:'100%',
+    width: block? '100%' : undefined,
 })
 
 interface IButtonProps {

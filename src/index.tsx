@@ -1,20 +1,22 @@
-import React from 'react';
+import * as React from 'react';
 import ReactDOM from 'react-dom';
-import {Provider} from 'react-redux';
-import {createStore, combineReducers} from 'redux';
+import { Provider } from 'react-redux';
+import { applyMiddleware, createStore, combineReducers} from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import { Router } from 'react-router';
+import { Router } from 'react-router-dom';
+import thunk from 'redux-thunk';
 import history from './history'
-import reducer from './reducers';
+import * as reducers from './ducks';
+import services from './services'
 import './index.css';
 import App from './App';
+
 import reportWebVitals from './reportWebVitals';
 
 const store = createStore(combineReducers({
-  count: reducer,
+  ...reducers,
   form: formReducer
-}))
-
+}), applyMiddleware(thunk.withExtraArgument(services)))
 
 
 ReactDOM.render(
