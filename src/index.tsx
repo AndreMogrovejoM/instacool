@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 
 const store = createStore(combineReducers({
   ...reducers,
-  form: formReducer
+  form: formReducer,
 }), applyMiddleware(thunk.withExtraArgument(services)))
 
 
